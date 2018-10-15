@@ -1,0 +1,4 @@
+rzslider .rz-ticks {
+  position: relative;
+  display: table-cell;
+}

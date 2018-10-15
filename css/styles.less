@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('constants.less');
+
+
+
+
+
+
+// prevent these from messing with line-height..
+sup, sub {
+    font-size:.5em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.6em;
+}
+sub { 
+  top: 0.5em; 
+}
+.container{
+    border-left:1px solid #dedede;
+    border-right:1px solid #dedede;
+}
+
+
+.main-body-region{
+   // .vertical-grad(@grad-light-background, @grad-dark-background);
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    //padding:0;
+    //margin:0;
+  //  background-color:@grad-dark-background!important;
+
+}
+
+/*.container row{
+    background-color:@grad-dark-background;
+}*/
+
+p{
+    font-family: 'Proxima Nova', Georgia;
+    
+}
+
+body {
+    font-size:16px;
+    margin-top:0px;
+    padding:0;
+    background-color:@non-container-background;
+
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+
+}
+
+html{
+}
+
+#floating-isi{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+#scrolling-isi{
+    position:static;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+#footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+
+.border-radius(@radius)
+{
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+
+}
+.border-top-radius(@radius)
+{
+    -webkit-border-top-left-radius:@radius;
+    -moz-border-top-left-radius: @radius;
+    border-top-left-radius: @radius;
+
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-top-right-radius: @radius;
+    border-top-right-radius: @radius;
+
+}
+
+// PLACEHOLDER FORMAT FOR FORMS
+::-webkit-input-placeholder {
+   font-weight:700;
+}
+:-moz-placeholder {
+   font-weight:700;
+}
+::-moz-placeholder {
+   font-weight:700;
+}
+:-ms-input-placeholder {  
+   font-weight:700;
+}
+
+.vertical-grad(@Top, @Bottom) {
+    background: @Top; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@Top, @Bottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@Top, @Bottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@Top, @Bottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@Top, @Bottom); /* Standard syntax */
+}
+.horizontal-grad(@Left, @Right) {
+    background: @Left; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, @Left, @Right); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, @Left, @Right); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, @Left, @Right); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, @Left, @Right); /* Standard syntax */
+}
+
+
+.sand-background{
+    background-color:@grad-light-background;
+}
+
+#bodymovin{
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+}
+
+#bodymovin-container{
+    margin-left:70px;
+    width:62%;
+    height:100%;
+
+}
+
+
+#bodymovin1{
+    
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+    /**/
+}
+
+#bodymovin1-container{
+  
+    width:100%;
+    height:450px;
+
+
+}
+
+#overview1, #overview2, #overview3{
+    margin-top: 10px;
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+}
+
+.overview-button:hover{
+     text-decoration: none;
+        color:#fefefe;
+    
+}
+.overview-button{
+    .woi-link;
+    width:100px;
+    padding: auto;
+    text-decoration: none;
+
+}
+
+.woi-link{
+    text-align: center;
+}
+
+.woi-link, .woi-link:hover, .woi-link:visited{
+    background-color: @woi-blue;
+    color:#FFF;
+    padding: 8px 15px;
+    //margin-right: 20px;
+    line-height: 26px;
+    text-decoration: none;
+    font-size:18px;
+    font-weight: 700;
+}
+
+.before-link{
+   .before-after-link;
+     background-color: @woi-blue!important;
+}
+
+.after-link{
+    .before-after-link;
+     background-color: #a2a2a2;
+}
+
+.before-after-link{
+    color:#FFF;
+//    padding: 5px 20px;
+    line-height: 26px;
+    text-decoration: none;
+    font-size:18px;
+    font-weight: 700;
+    display:inline;
+    cursor: pointer;
+    
+}
+
+
+.tear-drop-list{
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+   
+}
+
+.tear-drop-list li{
+    list-style: inside;
+//   list-style-image: url('./images/music-note.png');
+    list-style-type: none;
+    
+}
+
+.tear-drop-list li:before{
+    margin-right:5px;
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 10px;
+   background-image: url('./images/music-note.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.references{
+    font-size: 12px;
+    color:#343434;
+}
+
+
+
