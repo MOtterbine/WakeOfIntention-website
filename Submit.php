@@ -15,7 +15,7 @@
 //session_start();
 //$_SESSION['regName'] = $regValue;
 
-// gets posted json data 
+// gets posted json data
 $json_input = file_get_contents("php://input");
 $_POST = json_decode($json_input, true);
 
@@ -31,13 +31,13 @@ $var_timestamp = date("Y-m-d H:i:s");
 
 $headers = 'From: no-reply@otterbinesolutions.com' . "\r\n" .
     'Reply-To: no-reply@otterbinesolutions.com' . "\r\n" .
-    "MIME-Version: 1.0" . "\r\n" . 
+    "MIME-Version: 1.0" . "\r\n" .
     "Content-type: text/html; charset=UTF-8".
     'X-Mailer: PHP/' . phpversion();
     // to send html email
     //$email_text = file_get_contents('Email.html');
     // or...
-$email_text = 
+$email_text =
     "<table>".
     "<tr><td style=\"font-size:14px\">ServerTimestamp: </td><td>".$var_timestamp." - GMT</td></tr>".
     "<tr><td>First Name: </td><td>".$var_firstname."</td></tr>".
@@ -50,12 +50,12 @@ $email_text =
     "</table>";
    // "Browser Information: ".get_browser(null, true);
 
-$success = mail('mikeotterbine@gmail.com', 'User Submission', $email_text, $headers);
-  
+$success = mail('JohnDoe@somewhere.com', 'User Submission', $email_text, $headers);
+
 
 if (!$success) {
     $errorMessage = error_get_last()['message'];
-    
+
 }
 else
 {
@@ -68,6 +68,6 @@ else
 <script>
     console.log("Mail send status: <?php echo $success; ?>");
  </script>
- 
 
-    
+
+
